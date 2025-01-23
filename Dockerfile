@@ -19,5 +19,9 @@ ADD . /app
 # Expose server port
 EXPOSE 8000
 
-# Run application using `uv`
-CMD ["uv", "run", "manage.py", "runserver", "0.0.0.0:8000"]
+# Add entrypoint script
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+# Use entrypoint script
+ENTRYPOINT ["/app/entrypoint.sh"]
