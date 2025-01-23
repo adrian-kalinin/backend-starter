@@ -1,10 +1,17 @@
 from pathlib import Path
 
+from environs import env
+
+env.read_env()
+
+
+# Basic condifuration
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = ""
+SECRET_KEY = env.str("SECRET_KEY")
 
-DEBUG = True
+DEBUG = env.bool("DEBUG", default=False)
 
 ALLOWED_HOSTS = []
 
