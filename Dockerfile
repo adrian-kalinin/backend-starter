@@ -1,5 +1,8 @@
 FROM python:3.13-slim-bookworm
 
+# Update packages and install netcat
+RUN apt-get update && apt-get install -y netcat-traditional && rm -rf /var/lib/apt/lists/*
+
 # Install `uv` from official image
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 

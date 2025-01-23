@@ -3,6 +3,12 @@
 # Exit on error
 set -e
 
+# Wait for the database to be ready
+echo "Waiting for database to be ready..."
+until nc -z "$POSTGRES_HOST" "$POSTGRES_PORT"; do
+  sleep 0.1
+done
+
 # Run migrations before starting the app
 echo "Running database migrations..."
 uv run manage.py migrate
