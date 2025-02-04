@@ -32,6 +32,16 @@ ignore = [
   # Allow fixme and todo comments
   "FIX001",
   "FIX002",
+  # Ignore strings in exceptions
+  "EM101",
+  "EM102",
+  "EM103",
+  # Allow 'Any' type
+  "ANN401",
+  # Allow long exception messages
+  "TRY003",
+  # Ignore mutable default values
+  "RUF012",
 ]
 select = ["ALL"]
 
