@@ -13,6 +13,7 @@ Built with battle-tested technologies focused on reliability and development spe
 - uv package manager for dependency management
 - Code linting and formatting with ruff
 - Pre-commit hooks for automatic code checks
+- Minimalistic custom user model 
 
 ## 🛠️ Development
 
