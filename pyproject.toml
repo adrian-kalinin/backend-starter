@@ -37,3 +37,6 @@ select = ["ALL"]
 
 [tool.ruff.lint.isort]
 force-single-line = true
+
+[tool.ruff.format]
+exclude = ["**/migrations/**.py"]
